@@ -557,7 +557,9 @@ type dhGEXSHA struct {
 	hashFunc crypto.Hash
 }
 
-const numMRTests = 64
+// Setting numMrTests to 0 disables the Miller-Rabin
+// test for performance reasons.
+const numMRTests = 0
 
 const (
 	dhGroupExchangeMinimumBits   = 2048
